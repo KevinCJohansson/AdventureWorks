@@ -6,6 +6,7 @@ SELECT * FROM Sales.SalesOrderDetail
 SELECT
     pc.Name AS CategoryName,
     SUM(sod.OrderQty * sod.UnitPrice) AS TotalSales
+    
 FROM Production.ProductCategory pc
 INNER JOIN Production.ProductSubcategory psc
     ON pc.ProductCategoryID = psc.ProductCategoryID
